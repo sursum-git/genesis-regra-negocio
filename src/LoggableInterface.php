@@ -1,5 +1,5 @@
 <?php
-namespace Genesis\Contracts;
+namespace Genesis\BusinessRules;
 
 use Psr\Log\LoggerInterface;
 

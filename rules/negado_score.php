@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use Genesis\Helpers\LoggerHelper;
+use Genesis\BusinessRules\Helpers\LoggerHelper;
 
 $params = json_decode($argv[1] ?? '{}', true);
 
