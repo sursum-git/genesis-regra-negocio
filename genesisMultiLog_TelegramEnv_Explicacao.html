@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Integração com Telegram via .env e putenv()</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; max-width: 800px; margin: auto; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; margin-top: 30px; }
+        pre { background: #f4f4f4; padding: 10px; border-left: 5px solid #3498db; overflow-x: auto; }
+    </style>
+</head>
+<body>
+
+<h1>Integração com Telegram via .env e putenv()</h1>
+
+<h2>Objetivo</h2>
+<p>Explicar como o projeto <strong>genesisMultiLog</strong> carrega variáveis de ambiente do arquivo <code>.env</code> utilizando a função <code>putenv()</code>, sem dependência de bibliotecas externas.</p>
+
+<h2>Estrutura do arquivo .env</h2>
+<pre>TELEGRAM_BOT_TOKEN=SEU_TOKEN_AQUI
+TELEGRAM_CHAT_ID=SEU_CHAT_ID_AQUI</pre>
+
+<h2>Script de Carregamento</h2>
+<p>O script <code>bootstrap/load_env.php</code> lê o arquivo <code>.env</code> e injeta as variáveis no ambiente usando <code>putenv()</code>.</p>
+<pre>
+require_once __DIR__ . '/bootstrap/load_env.php';
+
+$token = getenv('TELEGRAM_BOT_TOKEN');
+$chatId = getenv('TELEGRAM_CHAT_ID');
+</pre>
+
+<h2>Integração com o Logger</h2>
+<p>A classe <code>Logging\TelegramHandler</code> acessa diretamente <code>getenv('TELEGRAM_BOT_TOKEN')</code> e <code>getenv('TELEGRAM_CHAT_ID')</code> para enviar logs de erro automaticamente para o Telegram.</p>
+
+<h2>Benefícios</h2>
+<ul>
+    <li>Sem dependência de bibliotecas externas</li>
+    <li>Simples de configurar</li>
+    <li>Seguro, desde que o arquivo <code>.env</code> não seja exposto publicamente</li>
+</ul>
+
+</body>
+</html>
