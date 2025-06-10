@@ -2,7 +2,7 @@
 
 namespace Genesis\BusinessRules\App\Rules;
 
-use Genesis\Contracts\BusinessRuleInterface;
+use Genesis\BusinessRules\BusinessRuleInterface;
 
 class ValidacoesCliente implements BusinessRuleInterface
 {

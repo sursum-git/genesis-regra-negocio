@@ -1,8 +1,8 @@
 <?php
 namespace Genesis\BusinessRules\App\Rules;
 
-use Genesis\Contracts\BusinessRuleInterface;
-use Genesis\Contracts\LoggableInterface;
+use Genesis\BusinessRules\BusinessRuleInterface;
+use Genesis\BusinessRules\LoggableInterface;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;
 

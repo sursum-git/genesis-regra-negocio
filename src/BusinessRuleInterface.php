@@ -1,5 +1,5 @@
 <?php
-namespace Genesis\Contracts;
+namespace Genesis\BusinessRules;
 
 interface BusinessRuleInterface {
     public function setParams(array $params): void;
