@@ -1,19 +1,52 @@
 <?php
-namespace Genesis\BusinessRules\App\Rules;
+namespace App\Rules;
 
-class ValidadorFinanceiro
+use Genesis\Contracts\BusinessRuleInterface;
+use Genesis\Contracts\LoggableInterface;
+use Psr\Log\LoggerInterface;
+
+class ValidadorFinanceiro implements BusinessRuleInterface, LoggableInterface
 {
-    public function validarScore(array $params): array
-    {
-        if (!isset($params['validacao']) || $params['validacao'] !== 'Idade aceita') {
-            return ['error' => 'Score não pode ser validado sem idade válida'];
+    private array $params = [];
+    private LoggerInterface $logger;
+    private array $result = [];
+    private array $errors = [];
+
+    public function setParams(array $params): void {
+        $this->params = $params;
+    }
+
+    public function setLogger(LoggerInterface $logger): void {
+        $this->logger = $logger;
+    }
+
+    public function process(): void {
+        $score = $this->params['score'] ?? null;
+
+        if (!is_numeric($score)) {
+            $this->errors[] = 'Score inválido ou ausente';
+            $this->logger->error('Score inválido ou ausente');
+            return;
         }
 
-        $score = $params['score'] ?? 0;
-        if ($score >= 650) {
-            return ['status' => 'Aprovado'];
+        if ($score < 600) {
+            $this->errors[] = 'Score abaixo do mínimo permitido';
+            $this->logger->error('Score abaixo do mínimo: ' . $score);
         } else {
-            return ['error' => 'Score muito baixo'];
+            $this->result = ['status' => 'Score válido'];
+            $this->logger->info('Score válido: ' . $score);
         }
+    }
+
+    public function getResults(): mixed {
+        return $this->result;
+    }
+
+    public function hasError(): bool {
+        return !empty($this->errors);
+    }
+
+    public function getErrors(): array {
+        return $this->errors;
     }
 }
