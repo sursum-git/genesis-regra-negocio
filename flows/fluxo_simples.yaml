@@ -1,0 +1,10 @@
+scripts:
+  - script: rules/validar_idade.php
+  - script: rules/validar_score.php
+    if:
+      idade:
+        ">=": 25
+    else_script: rules/negado_score.php
+params:
+  idade: 23
+  score: 580
