@@ -1,42 +1,22 @@
-# GenesisMultiLog
+# Wiki Interativa - genesis-regra-negocio
 
-GenesisMultiLog é uma biblioteca PHP modular para execução de regras de negócio com:
+Esta pasta contém os arquivos da wiki interativa. Para publicar via GitHub Pages:
 
-- Execução sequencial e condicional
-- Suporte a scripts com retorno JSON
-- Relatórios em JSON e HTML
-- Integração com Monolog
-- Fluxos internos via PHP ou CLI
-
-## Instalação
-
+1. Crie o branch `gh-pages` no seu repositório:
 ```bash
-composer install
+git checkout --orphan gh-pages
 ```
 
-## Exemplo de Uso
-
-```php
-use Genesis\BusinessRules\BusinessRuleProcessFlow;
-
-$flow = new BusinessRuleProcessFlow();
-$flow->addRuleScript('rules/validar_idade.php');
-$flow->addRuleScript([
-    'script' => 'rules/validar_score.php',
-    'if' => ['idade' => ['>=' => 25]],
-    'else_script' => 'rules/negado_score.php'
-]);
-$flow->setParams(['idade' => 22, 'score' => 500]);
-$flow->execute();
-print_r($flow->getResult());
-```
-
-## Testes
-
+2. Copie os arquivos desta pasta para o repositório:
 ```bash
-vendor/bin/phpunit tests/
+cp -r * /caminho/do/repositorio
+cd /caminho/do/repositorio
+git add .
+git commit -m "Publica wiki interativa"
+git push origin gh-pages
 ```
 
-## Licença
+3. No GitHub, vá em **Settings > Pages** e selecione o branch `gh-pages` como fonte da documentação.
 
-MIT
+A wiki estará disponível em:
+https://sursum-git.github.io/genesis-regra-negocio
