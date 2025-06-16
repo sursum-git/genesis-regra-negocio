@@ -16,7 +16,14 @@ trait TraitRegraNegocio
 
     public function setParams(array $params): void
     {
+
         $this->params = $params;
+        if(isset($params['log'])){
+            $this->initLogger($params['log']);
+        }else{
+            $this->initLogger();
+        }
+
         $this->logInfoMessage('Parâmetros', ['parametros' => $params]);
     }
 
@@ -29,6 +36,7 @@ trait TraitRegraNegocio
     public function getResults(): mixed
     {
         return $this->results;
+
     }
 
     public function hasError(): bool
