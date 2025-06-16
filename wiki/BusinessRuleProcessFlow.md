@@ -1,6 +1,6 @@
-# BusinessRuleProcessFlow
+# FluxoRegraNegocio
 
-A classe `BusinessRuleProcessFlow` permite organizar e executar regras de negócio de forma sequencial ou condicional. É a porta de entrada para criação de fluxos.
+A classe `FluxoRegraNegocio` permite organizar e executar regras de negócio de forma sequencial ou condicional. É a porta de entrada para criação de fluxos.
 
 ## Métodos principais
 

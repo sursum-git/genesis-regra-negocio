@@ -1,12 +1,12 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use Genesis\RegraNegocio\Helpers\LoggerHelper;
+use Genesis\RegraNegocio\Helpers\TraitLogRN;
 
 $params = json_decode($argv[1] ?? '{}', true);
 
 class NegadoScore {
-    use LoggerHelper;
+    use TraitLogRN;
 }
 
 $log = new NegadoScore();

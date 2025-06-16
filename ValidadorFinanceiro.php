@@ -1,11 +1,11 @@
 <?php
-namespace App\Rules;
+namespace Genesis\RegraNegocio\App\Rules;
 
-use Genesis\Contracts\BusinessRuleInterface;
-use Genesis\Contracts\LoggableInterface;
+use Genesis\RegraNegocio\IRegraNegocio;
+use Genesis\RegraNegocio\ILog;
 use Psr\Log\LoggerInterface;
 
-class ValidadorFinanceiro implements BusinessRuleInterface, LoggableInterface
+class ValidadorFinanceiro implements IRegraNegocio, ILog
 {
     private array $params = [];
     private LoggerInterface $logger;

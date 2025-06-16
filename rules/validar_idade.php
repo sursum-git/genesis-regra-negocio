@@ -1,13 +1,13 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use Genesis\RegraNegocio\Helpers\LoggerHelper;
+use Genesis\RegraNegocio\Helpers\TraitLogRN;
 
 $params = json_decode($argv[1] ?? '{}', true);
 $idade = $params['idade'] ?? null;
 
 class IdadeRule {
-    use LoggerHelper;
+    use TraitLogRN;
 }
 
 $log = new IdadeRule();

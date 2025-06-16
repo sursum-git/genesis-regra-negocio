@@ -1,5 +1,5 @@
 <?php
-namespace Logging;
+namespace Genesis\RegraNegocio\Logging;
 
 use Monolog\Logger;
 use Monolog\Handler\AbstractProcessingHandler;
