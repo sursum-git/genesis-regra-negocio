@@ -1,17 +1,22 @@
 <?php
 namespace Helpers;
 
-use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
-use Logging\TelegramHandler;
-use Psr\Log\LoggerInterface;
+ use Monolog\Logger;
+ use Monolog\Handler\StreamHandler;
+ use Logging\TelegramHandler;
+ use Psr\Log\LoggerInterface;
 
 trait LoggerHelper
 {
     protected LoggerInterface $logger;
 
-    public function initLogger(array $options = []): void
+    public function initLogger(array $options = [], ?LoggerInterface $logger = null): void
     {
+        if ($logger !== null) {
+            $this->logger = $logger;
+            return;
+        }
+
         $name = $options['name'] ?? 'genesis';
         $logLevel = $options['level'] ?? Logger::DEBUG;
 
