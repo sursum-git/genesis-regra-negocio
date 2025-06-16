@@ -1,11 +1,11 @@
 {
     "name": "sursum-git/genesis-multilog",
-    "description": "Framework modular para execu\u00e7\u00e3o de regras de neg\u00f3cio com logs e controle de fluxo condicional",
+    "description": "Framework modular para execucao de regras de negocio com logs e controle de fluxo condicional",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Genesis\\BusinessRules\\": "RegraNegocio/"
+            "Genesis\\RegraNegocio\\": "RegraNegocio/"
         }
     },
     "require": {

@@ -1,5 +1,5 @@
 <?php
-namespace Helpers;
+namespace Genesis\RegraNegocio\Helpers;
 
  use Monolog\Logger;
  use Monolog\Handler\StreamHandler;
