@@ -1,4 +1,4 @@
-# BusinessRuleInterface
+# IRegraNegocio
 
 Interface que define o contrato para qualquer regra de negócio executada no fluxo.
 
@@ -11,4 +11,4 @@ Interface que define o contrato para qualquer regra de negócio executada no flu
 - `hasError()`: indica se houve erro na execução.
 - `getErrors()`: retorna um array de mensagens de erro.
 
-Implementações devem seguir essa interface para que o `BusinessRuleProcessFlow` consiga orquestrar as regras de maneira padronizada.
+Implementações devem seguir essa interface para que o `FluxoRegraNegocio` consiga orquestrar as regras de maneira padronizada.

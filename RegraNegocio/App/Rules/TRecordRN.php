@@ -3,12 +3,12 @@ namespace Genesis\RegraNegocio\App\Rules;
 
 use Genesis\RegraNegocio\IRegraNegocio;
 use Psr\Log\LoggerInterface;
-use Genesis\RegraNegocio\Helpers\LoggerHelper;
+use Genesis\RegraNegocio\Helpers\TraitLogRN;
 use Genesis\RegraNegocio\TRecord;
 
 class TRecordRN implements IRegraNegocio
 {
-    use LoggerHelper;
+    use TraitLogRN;
 
     private array $params = [];
     private mixed $results = null;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Helpers;
+namespace Genesis\RegraNegocio\Helpers;
 
-use Helpers\TraitLogRN;
+use Genesis\RegraNegocio\Helpers\TraitLogRN;
 use Psr\Log\LoggerInterface;
 
 trait TraitRegraNegocio

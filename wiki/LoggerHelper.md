@@ -1,4 +1,4 @@
-# LoggerHelper
+# TraitLogRN
 
 Trait que provê uma implementação simples de logger utilizando Monolog. Pode ser reutilizada em diferentes regras ou serviços.
 

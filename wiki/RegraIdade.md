@@ -1,6 +1,6 @@
 # RegraIdade
 
-Exemplo de regra de negócio que valida a idade do usuário. Implementa `BusinessRuleInterface` e `LoggableInterface`.
+Exemplo de regra de negócio que valida a idade do usuário. Implementa `IRegraNegocio` e `ILog`.
 
 ## Exemplo de uso
 

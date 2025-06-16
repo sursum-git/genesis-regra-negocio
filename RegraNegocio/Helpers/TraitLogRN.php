@@ -1,9 +1,9 @@
 <?php
-namespace Helpers;
+namespace Genesis\RegraNegocio\Helpers;
 
  use Monolog\Logger;
  use Monolog\Handler\StreamHandler;
- use Logging\TelegramHandler;
+ use Genesis\RegraNegocio\Logging\TelegramHandler;
  use Psr\Log\LoggerInterface;
 
 trait TraitLogRN

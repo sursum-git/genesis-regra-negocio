@@ -1,4 +1,4 @@
-# LoggableInterface
+# ILog
 
 Interface auxiliar utilizada por classes que precisam disponibilizar um logger.
 
