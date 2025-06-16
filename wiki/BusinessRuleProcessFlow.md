@@ -14,9 +14,9 @@ A classe `BusinessRuleProcessFlow` permite organizar e executar regras de negóc
 ## Exemplo básico
 
 ```php
-use Genesis\BusinessRules\BusinessRuleProcessFlow;
+use Genesis\RegraNegocio\FluxoRegraNegocio;
 
-$flow = new BusinessRuleProcessFlow();
+$flow = new FluxoRegraNegocio();
 $flow->addRuleScript('rules/validar_idade.php');
 $flow->setParams(['idade' => 30]);
 $flow->execute();

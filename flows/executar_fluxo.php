@@ -1,10 +1,10 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../src/BusinessRuleProcessFlow.php';
+require_once __DIR__ . '/../RegraNegocio/FluxoRegraNegocio.php';
 
-use Genesis\BusinessRules\BusinessRuleProcessFlow;
+use Genesis\RegraNegocio\FluxoRegraNegocio;
 
-$flow = new BusinessRuleProcessFlow();
+$flow = new FluxoRegraNegocio();
 $flow->addRuleScript('rules/validar_idade.php');
 $flow->addRuleScript([
     'script' => 'rules/validar_score.php',

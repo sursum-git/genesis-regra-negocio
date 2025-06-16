@@ -1,10 +1,10 @@
 <?php
-namespace Genesis\BusinessRules\Logging;
+namespace Genesis\RegraNegocio;
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
-class LogMediaRouter {
+class MapNivelMidiaLog {
     private array $routes = [];
 
     public function map(string $level, string $mediaPath): void {

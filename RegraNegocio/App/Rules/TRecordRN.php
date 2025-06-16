@@ -1,12 +1,12 @@
 <?php
-namespace Genesis\BusinessRules\App\Rules;
+namespace Genesis\RegraNegocio\App\Rules;
 
-use Genesis\BusinessRules\BusinessRuleInterface;
+use Genesis\RegraNegocio\IRegraNegocio;
 use Psr\Log\LoggerInterface;
-use Genesis\BusinessRules\Helpers\LoggerHelper;
-use Genesis\BusinessRules\TRecord;
+use Genesis\RegraNegocio\Helpers\LoggerHelper;
+use Genesis\RegraNegocio\TRecord;
 
-class TRecordRN implements BusinessRuleInterface
+class TRecordRN implements IRegraNegocio
 {
     use LoggerHelper;
 

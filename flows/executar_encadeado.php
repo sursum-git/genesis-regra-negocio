@@ -1,17 +1,17 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Genesis\BusinessRules\BusinessRuleProcessFlow;
+use Genesis\RegraNegocio\FluxoRegraNegocio;
 
-$flow = new BusinessRuleProcessFlow();
+$flow = new FluxoRegraNegocio();
 $flow->addRuleScript([
-    'class' => Genesis\BusinessRules\App\Rules\MinhaClasse::class,
+    'class' => Genesis\RegraNegocio\App\Rules\MinhaClasse::class,
     'method' => 'minhaValidacao',
     'params' => ['idade' => 30]
 ]);
 
 $flow->addRuleScript([
-    'class' => Genesis\BusinessRules\App\Rules\ValidadorFinanceiro::class,
+    'class' => Genesis\RegraNegocio\App\Rules\ValidadorFinanceiro::class,
     'method' => 'validarScore',
     'params' => ['score' => 620]
 ]);

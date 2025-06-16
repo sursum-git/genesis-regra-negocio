@@ -1,7 +1,7 @@
 <?php
-namespace Genesis\BusinessRules;
+namespace Genesis\RegraNegocio;
 
-class BusinessRuleProcessFlow {
+class FluxoRegraNegocio {
     private array $scripts = [];
     private array $params = [];
     private array $result = [];

@@ -1,10 +1,10 @@
 <?php
 
-namespace Genesis\BusinessRules\App\Rules;
+namespace Genesis\RegraNegocio\App\Rules;
 
-use Genesis\BusinessRules\BusinessRuleInterface;
+use Genesis\RegraNegocio\IRegraNegocio;
 
-class ValidacoesCliente implements BusinessRuleInterface
+class ValidacoesCliente implements IRegraNegocio
 {
 
     public function setParams(array $params): void

@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use Genesis\BusinessRules\App\Rules\RegraIdade;
+use Genesis\RegraNegocio\App\Rules\RegraIdade;
 use Monolog\Logger;
 use Monolog\Handler\NullHandler;
 

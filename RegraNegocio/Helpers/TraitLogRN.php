@@ -6,21 +6,22 @@ namespace Helpers;
  use Logging\TelegramHandler;
  use Psr\Log\LoggerInterface;
 
-trait LoggerHelper
+trait TraitLogRN
 {
     protected LoggerInterface $logger;
 
     public function initLogger(array $options = [], ?LoggerInterface $logger = null): void
     {
+        $name = $options['name'] ?? 'genesis';
         if ($logger !== null) {
             $this->logger = $logger;
-            return;
-        }
 
-        $name = $options['name'] ?? 'genesis';
+        }else{
+            $this->logger = new Logger($name);
+        }
         $logLevel = $options['level'] ?? Logger::DEBUG;
 
-        $this->logger = new Logger($name);
+
         $this->logger->pushHandler(new StreamHandler('php://stdout', $logLevel));
 
         // Suporte ao Telegram (opcional)

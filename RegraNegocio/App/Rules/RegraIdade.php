@@ -1,12 +1,12 @@
 <?php
-namespace Genesis\BusinessRules\App\Rules;
+namespace Genesis\RegraNegocio\App\Rules;
 
-use Genesis\BusinessRules\BusinessRuleInterface;
-use Genesis\BusinessRules\LoggableInterface;
+use Genesis\RegraNegocio\IRegraNegocio;
+use Genesis\RegraNegocio\ILog;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;
 
-class RegraIdade implements BusinessRuleInterface, LoggableInterface
+class RegraIdade implements IRegraNegocio, ILog
 {
     private array $params;
     private LoggerInterface $logger;

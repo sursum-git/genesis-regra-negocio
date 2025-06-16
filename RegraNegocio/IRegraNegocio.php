@@ -1,7 +1,7 @@
 <?php
-namespace Genesis\BusinessRules;
+namespace Genesis\RegraNegocio;
 
-interface BusinessRuleInterface {
+interface IRegraNegocio {
     public function setParams(array $params): void;
     public function setLogger(\Psr\Log\LoggerInterface $logger): void;
     public function process(): void;

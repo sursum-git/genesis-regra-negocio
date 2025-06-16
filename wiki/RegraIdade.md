@@ -5,7 +5,7 @@ Exemplo de regra de negócio que valida a idade do usuário. Implementa `Busines
 ## Exemplo de uso
 
 ```php
-use Genesis\BusinessRules\App\Rules\RegraIdade;
+use Genesis\RegraNegocio\App\Rules\RegraIdade;
 use Monolog\Logger;
 use Monolog\Handler\NullHandler;
 

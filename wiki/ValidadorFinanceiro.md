@@ -5,7 +5,7 @@ Classe de exemplo para validação de score financeiro do cliente.
 ## Exemplo de uso
 
 ```php
-use Genesis\BusinessRules\App\Rules\ValidadorFinanceiro;
+use Genesis\RegraNegocio\App\Rules\ValidadorFinanceiro;
 use Monolog\Logger;
 use Monolog\Handler\NullHandler;
 

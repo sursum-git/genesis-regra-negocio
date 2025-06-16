@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use Genesis\BusinessRules\Helpers\LoggerHelper;
+use Genesis\RegraNegocio\Helpers\LoggerHelper;
 
 $params = json_decode($argv[1] ?? '{}', true);
 $score = $params['score'] ?? null;

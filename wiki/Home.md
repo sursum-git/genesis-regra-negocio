@@ -1,3 +1,0 @@
-# GenesisMultiLog Wiki
-
-Documentação principal.

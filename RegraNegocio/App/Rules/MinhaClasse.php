@@ -1,5 +1,5 @@
 <?php
-namespace Genesis\BusinessRules\App\Rules;
+namespace Genesis\RegraNegocio\App\Rules;
 
 class MinhaClasse
 {

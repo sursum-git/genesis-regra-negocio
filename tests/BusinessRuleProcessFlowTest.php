@@ -1,10 +1,10 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use Genesis\BusinessRules\BusinessRuleProcessFlow;
+use Genesis\RegraNegocio\FluxoRegraNegocio;
 
 class BusinessRuleProcessFlowTest extends TestCase {
     public function testFlowExecution() {
-        $flow = new BusinessRuleProcessFlow();
+        $flow = new FluxoRegraNegocio();
         $flow->addRuleScript('rules/validar_idade.php');
         $flow->setParams(['idade' => 30]);
         $flow->execute();
