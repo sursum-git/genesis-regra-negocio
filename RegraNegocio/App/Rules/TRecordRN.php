@@ -3,9 +3,10 @@ namespace Genesis\RegraNegocio\App\Rules;
 
 use Genesis\RegraNegocio\Helpers\TraitRegraNegocio;
 use Genesis\RegraNegocio\IRegraNegocio;
+use Genesis\RegraNegocio\IRegraNegocioTRecord;
 
 
-class TRecordRN implements IRegraNegocio
+class TRecordRN implements IRegraNegocio , IRegraNegocioTRecord
 {
    use TraitRegraNegocio;
 
@@ -25,10 +26,6 @@ class TRecordRN implements IRegraNegocio
             throw $e;
         }
     }
-
-
-
-
 
 
 }

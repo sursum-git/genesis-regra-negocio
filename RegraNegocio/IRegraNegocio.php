@@ -8,6 +8,6 @@ interface IRegraNegocio {
     public function getResults(): mixed;
     public function hasError(): bool;
     public function getErrors(): array;
-    public function getRecord():\stdClass;
+
 
 }
