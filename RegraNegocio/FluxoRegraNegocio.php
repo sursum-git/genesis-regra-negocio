@@ -51,18 +51,7 @@ class FluxoRegraNegocio {
                     $this->errors[] = $e->getMessage();
                 }
                 continue;
-            }
-
-            // Regra no formato anterior com script condicional
-            if (isset($rule['if']) && ($this->params['idade'] ?? 0) < 25) {
-                $this->errors[] = 'Idade insuficiente';
-                if (isset($rule['else_script'])) {
-                    $this->result[] = ['executado' => $rule['else_script']];
-                }
-            } else {
-                $script = $rule['script'] ?? '';
-                $this->result[] = ['executado' => $script];
-            }
+            }          
         }
     }
 
