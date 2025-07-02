@@ -34,6 +34,7 @@ class FluxoRegraNegocioTRecord
     public function process()
     {
         foreach ($this->regras as $regra) {
+            $regra = new $regra();
             $regra->setParams($this->params);
             if($this->logger){
                 $regra->setLogger($this->logger);
