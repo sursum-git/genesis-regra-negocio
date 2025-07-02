@@ -2,7 +2,6 @@
 
 namespace Genesis\RegraNegocio;
 use Psr\Log\LoggerInterface;
-
 class FluxoRegraNegocioTRecord
 {
     private $logParar = false;
@@ -16,7 +15,7 @@ class FluxoRegraNegocioTRecord
     {
         $this->logger = $logger;
     }
-    public function incluirRegra( IRegraNegocioTRecord $classe)
+    public function incluirRegra( $classe)
     {
            $this->regras[] = $classe;
     }
