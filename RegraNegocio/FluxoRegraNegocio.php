@@ -25,9 +25,10 @@ class FluxoRegraNegocio {
 
             // Suporte a definicao de classes/metodos
             if (is_array($rule) && isset($rule['class'])) {
-                $class  = $rule['class'];
-                $method = $rule['method'] ?? 'process';
-                $params = $rule['params'] ?? $this->params;
+                $class      = $rule['class'];
+                $method     = $rule['method'] ?? 'process';
+                $params     = $rule['params'] ?? $this->params;
+                $logParams  = $rule['logParams'] ?? false;
 
                 if (!class_exists($class)) {
                     $this->errors[] = "Classe {$class} nao encontrada";
