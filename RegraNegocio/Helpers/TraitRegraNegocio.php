@@ -12,12 +12,12 @@ trait TraitRegraNegocio
 
     private array $params = [];
     private mixed $results = null;
-    private classesGenericas = [];
+    private $classesGenericas = [];
     private array $errors = [];
 
     public function setClassesGenericas($classe)
     {
-        $this->$classesGenericas[] = $classe;
+        $this->classesGenericas[] = $classe;
         
     }
     
